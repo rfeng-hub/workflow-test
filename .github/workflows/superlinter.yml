@@ -10,7 +10,7 @@ jobs:
     # Name the Job
     name: Lint code base
     # Set the type of machine to run on
-    runs-on: ubuntu-latest
+    runs-on: node
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
@@ -19,5 +19,4 @@ jobs:
 
       # Runs the Super-Linter action
       - name: Test
-        uses: docker://node
         run: npm install && npm run test
